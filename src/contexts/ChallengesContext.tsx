@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 import Cookie from "js-cookie";
 
 import challenges from "../../challenges.json";
@@ -10,10 +10,10 @@ interface Challenge {
   amount: number;
 }
 interface ChallengesProps {
-  children: Element;
-  level: number;
-  currentExperience: number;
-  challengesCompleted: number;
+  children: ReactNode;
+  level?: number;
+  currentExperience?: number;
+  challengesCompleted?: number;
 }
 interface ChallengesContextData {
   level: number;
